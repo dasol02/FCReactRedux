@@ -15,13 +15,21 @@ import { render, createElement } from "./react.js";
 //   )
 // );
 
+function Title(props) {
+  return <h1>{props.children}</h1>;
+}
+
+function Item(props) {
+  return <li style={`color:${props.color}`}>{props.children}</li>;
+}
+
 const vdom = (
   <p>
-    <h1>React 만들기</h1>
+    <Title label="React">React 정말 잘 만들기</Title>
     <ul>
-      <li style="color:red">첫 번째 아이템</li>
-      <li style="color:blue">두 번째 아이템</li>
-      <li style="color:green">세 번째 아이템</li>
+      <Item color="red">첫 번째 아이템</Item>
+      <Item color="blue">두 번째 아이템</Item>
+      <Item color="green">세 번째 아이템</Item>
     </ul>
   </p>
 );
