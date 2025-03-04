@@ -1,3 +1,6 @@
+// const hooks = [];
+// let currentComponent = 0;
+
 export class Component {
   constructor(props) {
     this.props = props;
@@ -30,6 +33,20 @@ export function makeProps(props, children) {
   };
 }
 
+// function useState(initValue) {
+//   let position = currentComponent - 1;
+
+//   if (!hooks[position]) {
+//     hooks[position] = initValue;
+//   }
+
+//   const modifier = (nextValue) => {
+//     hooks[position] = nextValue;
+//   };
+
+//   return [hooks[position], modifier];
+// }
+
 export function createElement(tag, props, ...children) {
   props = props || {};
 
@@ -44,6 +61,15 @@ export function createElement(tag, props, ...children) {
         return tag(props);
       }
     }
+
+    // hooks[currentComponent] = null;
+    // currentComponent++;
+
+    // if (children.length > 0) {
+    //   return tag(makeProps(props, children));
+    // } else {
+    //   return tag(props);
+    // }
   } else {
     return { tag, props, children };
   }
