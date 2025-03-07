@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>비동기 카운터 앱</title>
+<style>
+    main {
+        padding: 3em;
+    }
+
+    #counter {
+        font-size: 124px;
+        font-weight: bold;
+    }
+
+    button {
+        padding: 1em;
+        margin-right: 1em;
+    }
+</style>
+</head>
+
+<body>
+<main>
+<header>
+    <h1>비동기 카운터 앱</h1>
+</header>
+<section>
+<p id="counter"></p>
+<p id="loading">요청중...</p>
+<div>
+    <button id="btn-increase">증가</button>
+    <button id="btn-async-increase">비동기 증가</button>
+    <button id="btn-decrease">감소</button>
+    <button id="btn-async-decrease">비동기 감소</button>
+    <button id="btn-reset">초기화</button>
+</div>
+
+</section> 
+
+</main>
+    <!-- <script src="app.js" type="module"></script> -->
+    <script src="appredux.js" type="module"></script>
+</body>
+
+</html>
